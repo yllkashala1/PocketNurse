@@ -1,5 +1,21 @@
-<h1> All medications</h1>
+<div class="all-medications">
 
-<% @medications.each do |medication| %>
-    <p><%= medication.name %></p>
-  <% end %>
+  <div id="all-medications-title">
+    <h1> All Medications</h1>
+  </div>
+
+  <div class="cards-container">
+  <% @medications.each do |medication| %>
+    <div class="medication-index-card">
+          <h2><%= medication.name.upcase %></h2>
+          <p><strong>Dose:</strong> <%= medication.dose %></p>
+          <p><strong>From</strong>  <%= medication.start_date %> <strong>To</strong> <%= medication.end_date %></p>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="btn-add-medication">
+    <p>Add Medication</p>
+  </div>
+
+</div>
