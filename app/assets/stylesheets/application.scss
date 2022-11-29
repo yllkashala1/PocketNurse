@@ -10,3 +10,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/medication_index";
+
+body {
+  background-color: $background;
+  color: $text;
+}
+
+h1 {
+  font-size: 28px;
+  font-family: $headers-font;
+}
