@@ -1,5 +1,10 @@
 <h1> All medications</h1>
 
 <% @medications.each do |medication| %>
-    <p><%= link_to "#{medication.name}", medication_path(medication)%></p>
+    <%= medication.name %>
+    <%= link_to "Delete",
+        medication_path(medication),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+  </p>
   <% end %>
