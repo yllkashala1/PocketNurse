@@ -1,6 +1,6 @@
 <div class="all-medications">
 
-  <div id="all-medications-title">
+<div id="all-medications-title">
     <h1> All Medications</h1>
   </div>
 
@@ -17,5 +17,12 @@
   <div class="btn-add-medication">
     <p>Add Medication</p>
   </div>
+  
+  <%= link_to "Delete",
+        medication_path(medication),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
 
+  <p><%= link_to "Add medication", new_medication_path %></p>
+  
 </div>
