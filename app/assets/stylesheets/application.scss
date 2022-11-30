@@ -10,8 +10,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pages/medication_index";
+
 @import "components/buttons";
+@import "pages/medications_new";
+@import "pages/medication_index";
+
 
 
 body {
