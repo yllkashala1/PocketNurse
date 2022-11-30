@@ -1,0 +1,27 @@
+// # Add-Medication Button
+
+.btn-add-medication {
+  background-color: black;
+  color: #F3F3F3;
+  width: 90%;
+  height: 60px;
+  padding: 5px;
+  margin-bottom: 30px;
+  border-radius: 34px;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-add-medication a {
+  font-family: $headers-font;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  color:#F3F3F3;
+  margin: 14px 0px 0px 0px;
+}
+
+// # SignIn/SignUp Button
