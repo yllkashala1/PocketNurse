@@ -1,1 +1,13 @@
+<h1>create new medication</h1>
+<%= simple_form_for(@medication) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :dose %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :intake_times %>
+  <%= f.input :interval %>
+  <%= f.input :comment %>
+  <%= f.submit  %>
+  <%= link_to 'Back all medication', medications_path(@medication) %>
+<% end %>
 
