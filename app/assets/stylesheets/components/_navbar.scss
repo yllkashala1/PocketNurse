@@ -10,3 +10,50 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.pocket-nurse-text-logo {
+  text-align: center;
+  font-family: $headers-font;
+  font-size: 13px;
+  letter-spacing: 2px;
+  align-content: center;
+
+  p {
+    margin: 0px;
+    margin-left: 130px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+
+
+.custom-navbar-menu {
+  width: 60vw;
+  height: 94vh;
+  
+  right: -15px;
+  border-radius: 22px 0px 0px 22px;
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+
+  a {
+    text-align: right;
+  }
+
+  h5 {
+    text-align: right;
+    padding-right: 16px
+  }
+}
+
+.links-container {
+  padding-top: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

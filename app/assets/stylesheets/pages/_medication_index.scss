@@ -16,7 +16,7 @@
 }
 
 .medication-index-card {
-  width: 332px;
+  width: 90%;
   height: 106px;
   background-color: $cards;
   margin-bottom:24px;
@@ -29,37 +29,32 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  h2 {
+    padding-top:10px;
+    font-family: $body-font;
+    font-size: 14px;
+    letter-spacing: 2;
+  }
+
+  p {
+    font-family: $body-font;
+    font-weight: lighter;
+    font-size: 12px;
+    margin: 0px;
+  }
 }
 
-.medication-index-card h2 {
-  font-family: $body-font;
-  font-size: 14px;
-  letter-spacing: 2;
-}
-
-.medication-index-card p {
-  font-family: $body-font;
-  font-weight: lighter;
-  font-size: 12px;
-  margin: 0px;
-}
-
-// # Add-Medication Button
-
-.btn-add-medication {
-  background-color: black;
-  color: #F3F3F3;
-  width: 90%;
-  height: 60px;
-  padding: 5px;
-  margin-bottom: 30px;
-  border-radius: 34px;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
+.trash-can {
   display: flex;
-  justify-content: center;
+  margin: 0px;
+  justify-content: right;
 }
-.btn-add-medication p {
-  margin: 0px
+
+.trash-can > img {
+  padding-right: 3px;
+  width: 5%;
+  height: 80%;
+  display: flex;
+  align-content: right;
 }
