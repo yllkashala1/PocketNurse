@@ -10,19 +10,20 @@
           <h2><%= medication.name.upcase %></h2>
           <p><strong>Dose:</strong> <%= medication.dose %></p>
           <p><strong>From</strong>  <%= medication.start_date %> <strong>To</strong> <%= medication.end_date %></p>
-    </div>
+    <%= link_to "Delete",
+        medication_path(medication),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+      </div>
     <% end %>
   </div>
 
   <div class="btn-add-medication">
     <p>Add Medication</p>
   </div>
-  
-  <%= link_to "Delete",
-        medication_path(medication),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-      %>
+
+
 
   <p><%= link_to "Add medication", new_medication_path %></p>
-  
+
 </div>
