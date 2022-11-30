@@ -51,28 +51,28 @@ calcium = Medication.create!(
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
-  user: ms_von_braun
+  user: ms_von_braun)
 
 vitamind = Medication.create!(
   name: "Vitamin D",
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
-  user: ms_von_braun
+  user: ms_von_braun)
 
 vitaminb = Medication.create!(
   name: "Vitamin B",
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
-  user: ms_von_braun
+  user: ms_von_braun)
 
 antibiotika = Medication.create!(
   name: "Antibiotika",
   start_date: Date.new(2022, 12, 15),
   end_date: Date.new(2022, 12, 18),
   dose: "2 Tab",
-  user: ms_von_braun
+  user: ms_von_braun)
 
 vitaminc = Medication.create!(
   name: "Vitamin C",
