@@ -12,11 +12,11 @@
 <% beginning_of_current_week = Date.today.at_beginning_of_week %>
 <% four_weeks = (beginning_of_current_week - 2.weeks..beginning_of_current_week + 2.weeks).to_a %>
 
-<div class="days-container">
+<div class="days-container" data-controller="horizontal-scroll">
   <% four_weeks.each do |date| %>
     <% if date == Date.today %>
-      <div class="day-card">
-        <span class="today day-number"><%= date.day %></span>
+      <div class="day-card" data-horizontal-scroll-target="day">
+        <span id="today" class="day-number"><%= date.day %></span>
         <span id="weekday"><%= date.strftime("%a")  %></span>
       </div>
     <% else %>

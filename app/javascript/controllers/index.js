@@ -7,5 +7,7 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import TomSelectController from "./tom_select_controller"
-application.register("tom-select", TomSelectController)
+
+import HorizontalScrollController from "./horizontal_scroll_controller"
+application.register("horizontal-scroll", HorizontalScrollController)
+
