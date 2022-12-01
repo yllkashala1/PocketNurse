@@ -1,14 +1,23 @@
-<h1>create new medication</h1>
-<%= simple_form_for(@medication) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :dose %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.input :intake_times %>
-  <%= f.input :interval %>
-  <%= f.input :comment %>
-  <%= f.submit  %>
-  <%= link_to 'Back all medication', medications_path(@medication) %>
-<% end %>
 
+<div class="add-medication-container">
+  <div class="add-medication-card">
+    <%= link_to 'Back', medications_path(@medication) %>
+    <div class="card-content">
+      <div class="image-title">
+        <h1>Add Medication</h1>
+        <%= image_tag "pills.svg" %>
+      </div>
+        <%= simple_form_for(@medication) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :dose %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.input :intake_times %>
+          <%= f.input :interval %>
+          <%= f.input :comment %>
+          <%= f.submit class: "btn-save-medication" %>
+        <% end %>
+    </div>
+  </div>
+</div>
 

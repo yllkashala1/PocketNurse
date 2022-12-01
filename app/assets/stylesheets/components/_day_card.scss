@@ -1,0 +1,35 @@
+.day-card {
+  font-family: $headers-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  .day-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #9F9F9F;
+    padding: 15px 15px;
+    margin: 10px 10px;
+    font-family: $headers-font;
+
+  }
+}
+
+.today {
+  background-color: #F2E1BD !important;
+  font-weight: 600;
+}
+
+.days-container {
+  display: flex;
+  overflow-y: visible;
+  overflow-x: scroll;
+  width: 100%;
+}
