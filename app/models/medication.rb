@@ -14,7 +14,7 @@ class Medication < ApplicationRecord
 
     date = start_date
     while date <= end_date
-      Intake.create(date_intake: date, medication: self)
+      Intake.create(expected_intake: date, medication: self)
       date += interval
     end
   end
