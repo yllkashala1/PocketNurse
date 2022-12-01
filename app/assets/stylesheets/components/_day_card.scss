@@ -22,10 +22,10 @@
   }
 }
 
-.today {
+#today {
   background-color: #F2E1BD !important;
   font-weight: 600;
-
+  padding: 20px;
 }
 
 .days-container {
@@ -33,4 +33,5 @@
   overflow-y: visible;
   overflow-x: scroll;
   width: 100%;
+  padding-bottom: 12px;
 }
