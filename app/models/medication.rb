@@ -1,4 +1,6 @@
 class Medication < ApplicationRecord
+  attr_accessor :intake_times, :interval
+
   after_create :generate_intakes
   belongs_to :user
   has_many :intakes

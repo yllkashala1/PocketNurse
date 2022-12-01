@@ -28,6 +28,8 @@ class MedicationsController < ApplicationController
   end
 
   def create
+    raise
+
     @medication = Medication.new(medication_params)
     @medication.user = current_user
     if @medication.save

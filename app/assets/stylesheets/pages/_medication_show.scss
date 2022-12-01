@@ -5,18 +5,14 @@
   justify-content: left;
 }
 
-.show-title-h1 {
-  padding-left: 25px;
-  margin-top: 30px;
-}
-
 .show-content {
   border-radius: 34px 34px 0px 0px;
   background-color: #ffff;
   width: 100%;
   padding: 30px 25px 80px 25px;
-  margin-top: 10px;
-  height: 525px;
+  margin-top: 20px;
+  height: 655px;
+  align-items: bottom;
 }
 
 .show-content a {
@@ -29,12 +25,13 @@
   font-family: $headers-font;
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .show-content h1 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 70px;
+  padding-bottom: 25px;
+  margin: 0px;
 }
 
 .comment-box {
@@ -68,5 +65,6 @@
     color: black;
     font-size: 15px;
     font-family: $headers-font;
+    margin-top: 90px;
   }
 }
