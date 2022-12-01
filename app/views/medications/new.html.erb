@@ -12,8 +12,14 @@
           <%= f.input :dose %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
-          <%= f.input :intake_times %>
-          <%= f.input :interval %>
+          <%= f.input :intake_times,
+                      as: :select,
+                      collection: ["12:00am"] + (1..11).map {|h| "#{h}:00am"}.to_a + ["12:00pm"] + (1..11).map {|h| "#{h}:00pm"}.to_a,
+                      input_html: { multiple: true, class: "time-selector" } %>
+          <%= f.input :interval,
+                      as: :select,
+                      collection: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                      input_html: { multiple: true, class: "interval-selector" } %>
           <%= f.input :comment %>
           <%= f.submit class: "btn-save-medication" %>
         <% end %>
