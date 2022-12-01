@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :medications, only: [:index, :show, :edit, :update, :destroy, :create, :new]
   # verb "url", to: "controller_name#action", as: :prefix (prefix_path)
   get "calendar", to: "intakes#calendar"
+  get "month-calendar", to: "intakes#month_calendar"
 end

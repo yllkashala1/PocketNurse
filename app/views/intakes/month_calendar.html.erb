@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Calendar</h1>
+<%#= calendar(start_date: Date.today.at_beginning_of_week, number_of_days: 7) do |date| %>
+  <%# if date == Date.today %>
+    <!-- <p><strong><%#= date.day %></strong></p> -->
+  <%# else %>
+    <!--  <p><%#= date.day %></p> -->
+  <%# end %>
+<%# end %>
+<!-- </div> -->
+
+<% beginning_of_current_week = Date.today.at_beginning_of_week %>
+<% four_weeks = (beginning_of_current_week - 2.weeks..beginning_of_current_week + 2.weeks).to_a %>
+
+<div class="d-flex w-100 overflow-scroll">
+  <% four_weeks.each do |date| %>
+    <% if date == Date.today %>
+      <div class="day-card">
+        <p><strong><%= date.day %></strong></p>
+        <%= date.strftime("%^a")  %>
+      </div>
+    <% else %>
+      <div class="day-card">
+        <p><%= date.day %></p>
+        <%= date.strftime("%^a")  %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
