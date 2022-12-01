@@ -1,4 +1,6 @@
 class Medication < ApplicationRecord
+  attr_accessor :intake_times, :interval
+
   after_create :generate_intakes
   belongs_to :user
   has_many :intakes
@@ -12,7 +14,7 @@ class Medication < ApplicationRecord
 
     date = start_date
     while date <= end_date
-      Intake.create(date_intake: date, medication: self)
+      Intake.create(expected_intake: date, medication: self)
       date += interval
     end
   end
