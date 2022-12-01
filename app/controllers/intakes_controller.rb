@@ -2,11 +2,15 @@ class IntakesController < ApplicationController
   def index
     # There is a date in params
     if params[:date]
+      raise
       numbers = params[:date].split("-").map(&:to_i)
-      @intakes = current_user.intakes.where(date_intake: Date.new(numbers[0], numbers[1], numbers[2]))
+      date = Date.new(params[:date])
+      @morning_intakes = current_user.intakes.morning(date)
+      @afternoon_intakes = current_user.intakes.afternoon(date)
+      @evening_intakes = current_user.intakes.evening(date)
     # There isn't a date in params
     else
-      @intakes = current_user.intakes.where(date_intake: Date.today)
+      @intakes = current_user.intakes.where(expected_intake: Date.today)
     end
   end
 
