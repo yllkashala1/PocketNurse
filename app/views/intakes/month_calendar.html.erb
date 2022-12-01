@@ -12,18 +12,18 @@
 <% beginning_of_current_week = Date.today.at_beginning_of_week %>
 <% four_weeks = (beginning_of_current_week - 2.weeks..beginning_of_current_week + 2.weeks).to_a %>
 
-<div class="d-flex w-100 overflow-scroll">
+<div class="days-container">
   <% four_weeks.each do |date| %>
     <% if date == Date.today %>
       <div class="day-card">
-        <p><strong><%= date.day %></strong></p>
-        <%= date.strftime("%^a")  %>
+        <span class="today day-number"><%= date.day %></span>
+        <span id="weekday"><%= date.strftime("%a")  %></span>
       </div>
     <% else %>
-      <div class="day-card">
-        <p><%= date.day %></p>
-        <%= date.strftime("%^a")  %>
-      </div>
+    <div class="day-card">
+      <span class="day-number"><%= date.day %></span>
+      <span id="weekday"><%= date.strftime("%a")  %></span>
+    </div>
     <% end %>
   <% end %>
 </div>
