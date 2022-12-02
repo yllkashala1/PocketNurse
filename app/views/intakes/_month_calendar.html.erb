@@ -14,15 +14,19 @@
 <div class="days-container" data-controller="horizontal-scroll">
   <% four_weeks.each do |date| %>
     <% if date == Date.today %>
-      <div class="day-card" data-horizontal-scroll-target="day">
+
+      <%= link_to intakes_path(date: date.strftime("%Y-%m-%d")), class: "day-card", data: { horizontal_scroll_target: "day" } do %>
         <span id="today" class="day-number"><%= date.day %></span>
         <span id="weekday"><%= date.strftime("%a")  %></span>
-      </div>
+      <% end %>
+
     <% else %>
-    <div class="day-card">
-      <span class="day-number"><%= date.day %></span>
-      <span id="weekday"><%= date.strftime("%a")  %></span>
-    </div>
+
+      <%= link_to intakes_path(date: date.strftime("%Y-%m-%d")), class: "day-card", data: { horizontal_scroll_target: "day" } do %>
+        <span class="day-number"><%= date.day %></span>
+        <span id="weekday"><%= date.strftime("%a")  %></span>
+      <% end %>
+
     <% end %>
   <% end %>
 </div>

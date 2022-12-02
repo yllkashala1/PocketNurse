@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :intakes, only: [:index]
   get "calendar", to: "intakes#calendar"
   get "month-calendar", to: "intakes#month_calendar"
-  end
-
+  get "home_page", to: "medications#home_page"
+end
