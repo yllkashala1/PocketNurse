@@ -1,0 +1,72 @@
+.show-individual-medication {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.show-content {
+  border-radius: 34px 34px 0px 0px;
+  background-color: #ffff;
+  width: 100%;
+  padding: 30px 25px 80px 25px;
+  margin-top: 20px;
+  height: 655px;
+  align-items: bottom;
+}
+
+.show-content a {
+  color: black;
+  font-weight: 400;
+  font-size: 13;
+}
+
+.show-content p {
+  font-family: $headers-font;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+.show-content h1 {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  margin: 0px;
+}
+
+.comment-box {
+  background-color: #F3F3F3;
+  color: black;
+  border-radius: 14px;
+  padding:15px;
+  margin: 0px;
+  height: 113px;
+  width: 100%;
+  font-size: 10px;
+  font-weight: light;
+  font-family: $body-font;
+
+  p {
+    font-size: 10px;
+    font-family: $body-font;
+    font-weight: 300;
+    color: black;
+  }
+}
+
+.btn-add-medication a {
+  color: white;
+}
+
+.link-all-medications {
+  display: flex;
+  justify-content: right;
+  padding-right: 25px;
+
+  a {
+    color: black;
+    font-size: 15px;
+    font-family: $headers-font;
+    margin-top: 90px;
+  }
+}
