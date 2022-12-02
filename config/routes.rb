@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # verb "url", to: "controller_name#action", as: :prefix (prefix_path)
   get "calendar", to: "intakes#calendar"
   get "month-calendar", to: "intakes#month_calendar"
+  get "home_page", to: "medications#home_page"
 end
