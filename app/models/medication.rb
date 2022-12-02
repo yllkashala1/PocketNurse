@@ -3,7 +3,7 @@ class Medication < ApplicationRecord
 
   # after_create :generate_intakes
   belongs_to :user
-  has_many :intakes
+  has_many :intakes, dependent: :destroy
 
   # private
 
