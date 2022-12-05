@@ -3,12 +3,12 @@ class Medication < ApplicationRecord
 
   # after_create :generate_intakes
   belongs_to :user
-  has_many :intakes
+  has_many :intakes, dependent: :destroy
 
   # private
 
   def generate_intakes(interval, intake_times)
-    # interval => ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    # interval => ["Monday", "Tuesday", "Thursday", "Saturday"]
     # intake_times => ["7:00am", "1:00pm", "7:00pm"]
     start_date = self.start_date # Fri, 02 Dec 2022
     end_date = self.end_date # end_date user input inside klammern # Mon, 05 Dec 2022
