@@ -38,7 +38,7 @@
           <div class="tick-off-circle"></div>
           <h4><%= link_to "#{intake.medication.name}", medication_path(intake.medication) %></h4>
           <p>Dose: <%= intake.medication.dose %></p>
-          <p>Time: <%= intake.expected_intake.strftime("%H:%M") %></p>
+          <p>Time: <%= intake.expected_intake.strftime("at %I:%M%p") %></p>
         </div>
         <% end %>
       </div>

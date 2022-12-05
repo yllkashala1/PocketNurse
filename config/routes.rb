@@ -6,4 +6,4 @@ Rails.application.routes.draw do
   get "calendar", to: "intakes#calendar"
   get "home", to: "pages#home"
   get "month-calendar", to: "intakes#month_calendar"
-  end
+end
