@@ -37,7 +37,7 @@
         <% @morning_intakes.each do |intake| %>
         <div class="intake-card">
           <div class="tick-off-circle"></div>
-          <h4><%= intake.medication.name %></h4>
+          <h4><%= link_to "#{intake.medication.name}", medication_path(intake.medication) %></h4>
           <p>Dose: <%= intake.medication.dose %></p>
           <p>Time: <%= intake.expected_intake.strftime("%H:%M") %></p>
         </div>
@@ -45,12 +45,13 @@
       </div>
     </div>
 
+
     <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
       <div class="Intakes-Index">
         <% @afternoon_intakes.each do |intake| %>
           <div class="intake-card">
             <div class="tick-off-circle"></div>
-            <h4><%= intake.medication.name %></h4>
+            <h4><%= link_to "#{intake.medication.name}", medication_path(intake.medication) %></h4>
             <p>Dose: <%= intake.medication.dose %></p>
             <p>Time: <%= intake.expected_intake.strftime("%H:%M") %></p>
           </div>
@@ -63,7 +64,7 @@
         <% @evening_intakes.each do |intake| %>
         <div class="intake-card">
           <div class="tick-off-circle"></div>
-          <h4><%= intake.medication.name %></h4>
+          <h4><%= link_to "#{intake.medication.name}", medication_path(intake.medication) %></h4>
           <p>Dose: <%= intake.medication.dose %></p>
           <p>Time: <%= intake.expected_intake.strftime("%H:%M") %></p>
         </div>
