@@ -12,21 +12,21 @@
 <% four_weeks = (beginning_of_current_week - 2.weeks..beginning_of_current_week + 2.weeks).to_a %>
 
 <div class="days-container" data-controller="horizontal-scroll">
-  <% four_weeks.each do |date| %>
-    <% if date == Date.today %>
 
+  <% four_weeks.each do |date| %>
+    <% if date == @selected_date %>
       <%= link_to intakes_path(date: date.strftime("%Y-%m-%d")), class: "day-card", data: { horizontal_scroll_target: "day" } do %>
         <span id="today" class="day-number"><%= date.day %></span>
         <span id="weekday"><%= date.strftime("%a")  %></span>
       <% end %>
 
     <% else %>
-
       <%= link_to intakes_path(date: date.strftime("%Y-%m-%d")), class: "day-card", data: { horizontal_scroll_target: "day" } do %>
         <span class="day-number"><%= date.day %></span>
         <span id="weekday"><%= date.strftime("%a")  %></span>
       <% end %>
-
     <% end %>
+
   <% end %>
+
 </div>

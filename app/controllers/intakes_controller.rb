@@ -3,17 +3,14 @@ class IntakesController < ApplicationController
     # There is a date in params
     if params[:date]
       numbers = params[:date].split("-").map(&:to_i)
-      date = Date.new(numbers[0], numbers[1], numbers[2])
-      @morning_intakes = current_user.intakes.morning(date)
-      @afternoon_intakes = current_user.intakes.afternoon(date)
-      @evening_intakes = current_user.intakes.evening(date)
-    # There isn't a date in params
-    else
-      today = Date.today
-      @morning_intakes = current_user.intakes.morning(today)
-      @afternoon_intakes = current_user.intakes.afternoon(today)
-      @evening_intakes = current_user.intakes.evening(today)
+      chosen_date = Date.new(numbers[0], numbers[1], numbers[2])
     end
+
+    @selected_date = (chosen_date || Date.today)
+
+    @morning_intakes = current_user.intakes.morning(@selected_date)
+    @afternoon_intakes = current_user.intakes.afternoon(@selected_date)
+    @evening_intakes = current_user.intakes.evening(@selected_date)
   end
 
   def month_calendar
