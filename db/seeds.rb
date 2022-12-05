@@ -98,4 +98,3 @@ vitamind.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(
 vitaminb.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
 antibiotika.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
 vitaminc.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-
