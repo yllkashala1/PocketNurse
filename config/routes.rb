@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "intakes#index"
+  root to: "pages#home"
   resources :medications, only: [:index, :show, :edit, :update, :destroy, :create, :new]
   resources :intakes, only: [:index]
   get "calendar", to: "intakes#calendar"

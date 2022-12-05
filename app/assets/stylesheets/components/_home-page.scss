@@ -2,11 +2,14 @@
    align-items: center;
    padding-top: 25px;
 }
+
 .medications {
   background-color: #f2e1bd;
   color: black;
   border-radius: 24px;
   margin: 30px;
+  margin-bottom: 15px;
+  margin-top: 80px;
   padding: 10px 10px;
   width: 324px;
   height: 172px;
@@ -17,6 +20,7 @@
 
 h2 {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .appointments {
@@ -24,6 +28,7 @@ h2 {
   color: black;
   border-radius: 24px;
   margin: 30px;
+  margin-top: 15px;
   padding: 10px 10px;
   width: 324px;
   height: 172px;
@@ -42,6 +47,8 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding-top: 15px;
+  height: 100vh;
+
 
   h5 {
     font-size: 13px;
@@ -55,13 +62,15 @@ h2 {
   }
 }
 
-.shadow {
+.home-container .shadow {
   position: absolute;
   width: 298px;
   height: 20px;
   left: 46px;
   top: 766px;
-  background: #DCE7FF40;
-  opacity: 0.2;
+  background: #CEDCF2;
+  opacity: 15%;
   filter: blur(2px);
+  border-radius: 150px;
+  margin-top: 60px;
 }
