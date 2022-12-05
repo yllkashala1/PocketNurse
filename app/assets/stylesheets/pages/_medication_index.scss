@@ -6,8 +6,12 @@
 #all-medications-title {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding: 2px;
+
+  a {
+    margin-top: 10px;
+  }
 }
 
 .cards-container {
@@ -40,6 +44,7 @@
     font-family: $body-font;
     font-size: 14px;
     letter-spacing: 2;
+    text-align: left;
   }
 
   p {
@@ -62,4 +67,10 @@
   height: 80%;
   display: flex;
   align-content: right;
+}
+
+a {
+  color: black;
+  font-weight: 500;
+  font-size: 13;
 }
