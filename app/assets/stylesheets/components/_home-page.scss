@@ -1,6 +1,6 @@
 .container {
-   align-items: center;
-   padding-top: 25px;
+  align-items: center;
+  padding-top: 25px;
 }
 
 .medications {
@@ -9,18 +9,28 @@
   border-radius: 24px;
   margin: 30px;
   margin-bottom: 15px;
-  margin-top: 80px;
-  padding: 10px 10px;
+  margin-top: 60px;
   width: 324px;
   height: 172px;
   text-decoration: none;
-  padding-left: 25px;
-  padding-top: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
 }
 
-h2 {
+.home-title {
+  font-size: 30px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .appointments {
@@ -29,11 +39,16 @@ h2 {
   border-radius: 24px;
   margin: 30px;
   margin-top: 15px;
-  padding: 10px 10px;
+  padding: 20px;
   width: 324px;
   height: 172px;
-  padding-left: 25px;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-size: 20px;
+  }
 }
 
 .image-doctors-heart img {
@@ -47,7 +62,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   padding-top: 15px;
-  height: 100vh;
+  height: 100%;
 
 
   h5 {
@@ -63,7 +78,7 @@ h2 {
 }
 
 .home-container .shadow {
-  position: absolute;
+  align-items: center;
   width: 298px;
   height: 20px;
   left: 46px;
@@ -71,6 +86,5 @@ h2 {
   background: #CEDCF2;
   opacity: 15%;
   filter: blur(2px);
-  border-radius: 150px;
-  margin-top: 60px;
+  border-radius: 250px;
 }

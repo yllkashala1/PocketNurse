@@ -69,6 +69,7 @@ calcium = Medication.create!(
 
 calcium.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
 
+
 puts "Creating Vitamin D and intakes..."
 vitamind = Medication.create!(
   name: "Vitamin D",
@@ -93,6 +94,7 @@ vitaminb = Medication.create!(
 
 vitaminb.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
 
+
 puts "Creating Antibiotika and intakes..."
 antibiotika = Medication.create!(
   name: "Antibiotika",
@@ -110,6 +112,7 @@ vitaminc = Medication.create!(
   name: "Vitamin C",
   start_date: Date.new(2022, 12, 10),
   end_date: Date.new(2023, 01, 10),
+
   dose: "1",
   comment: "Don't forget to trink water!",
   user: ms_von_braun
@@ -131,3 +134,4 @@ aspirin.generate_intakes(
   ["Friday", "Saturday", "Sunday"],
   ["7:00am", "1:00pm", "7:00pm"],
 )
+
