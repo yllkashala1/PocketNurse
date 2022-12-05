@@ -25,6 +25,7 @@ ibuprofen = Medication.create!(
   start_date: Date.new(2022, 12, 9),
   end_date: Date.new(2022, 12, 15),
   dose: "3 Tabs",
+  comment: "Eat something before taking this med.",
   user: ms_von_braun
 )
 
@@ -37,6 +38,7 @@ multivitamin = Medication.create!(
   start_date: Date.new(2022, 12, 9),
   end_date: Date.new(2022, 12, 15),
   dose: "3 Tabs",
+  comment: "Trink 2 glasses of water",
   user: ms_von_braun
 )
 
@@ -49,6 +51,7 @@ magnesium = Medication.create!(
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
+  comment: "Don't forget to take this med.",
   user: ms_von_braun
 )
 
@@ -60,6 +63,7 @@ calcium = Medication.create!(
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
+  comment: "Eat something before taking this med.",
   user: ms_von_braun
 )
 
@@ -71,6 +75,7 @@ vitamind = Medication.create!(
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
+  comment: "Eat something before taking this med.",
   user: ms_von_braun
 )
 
@@ -82,6 +87,7 @@ vitaminb = Medication.create!(
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
+  comment: "Eat something before taking this med.",
   user: ms_von_braun
 )
 
@@ -93,6 +99,7 @@ antibiotika = Medication.create!(
   start_date: Date.new(2022, 12, 15),
   end_date: Date.new(2022, 12, 18),
   dose: "2 Tabs",
+  comment: "Eat something before taking Antibiotika!",
   user: ms_von_braun
 )
 
@@ -104,6 +111,7 @@ vitaminc = Medication.create!(
   start_date: Date.new(2022, 12, 10),
   end_date: Date.new(2023, 01, 10),
   dose: "1",
+  comment: "Don't forget to trink water!",
   user: ms_von_braun
 )
 
@@ -113,8 +121,9 @@ puts "Creating Aspirin and intakes..."
 aspirin = Medication.create!(
   name: "Aspirin",
   start_date: Date.new(2022, 12, 9),
-  end_date: Date.new(2022, 12, 15),
+  end_date: Date.new(2022, 12, 11),
   dose: " 1 Tab",
+  comment: "This is very important!",
   user: ms_von_braun
 )
 
