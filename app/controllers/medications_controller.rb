@@ -41,6 +41,6 @@ class MedicationsController < ApplicationController
   private
 
   def medication_params
-    params.require(:medication).permit(:name, :start_date, :end_date, :dose)
+    params.require(:medication).permit(:name, :start_date, :end_date, :dose, :comment)
   end
 end
