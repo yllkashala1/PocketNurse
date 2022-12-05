@@ -17,13 +17,13 @@
 .pocket-nurse-text-logo {
   text-align: center;
   font-family: $headers-font;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 2px;
   align-content: center;
 
   a {
     margin: 0px;
-    margin-left: 130px;
+    margin-left: 135px;
   }
 
   a {
@@ -59,4 +59,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.container-fluid {
+  padding-top: 7px;
 }
