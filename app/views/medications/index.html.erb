@@ -2,13 +2,13 @@
 
   <div id="all-medications-title">
     <h1> All Medications</h1>
+    <%= link_to "Back", :back %>
   </div>
 
   <div class="cards-container">
     <% @medications.each do |medication| %>
       <div class="medication-index-card">
-
-        <h2><%= medication.name.upcase %></h2>
+        <h2><%= link_to "#{medication.name.upcase}", medication_path(medication) %></h2>
         <p><strong>Dose:</strong> <%= medication.dose %></p>
         <p><strong>From</strong>  <%= medication.start_date %> <strong>To</strong> <%= medication.end_date %></p>
 
@@ -25,7 +25,7 @@
     <div class="btn-add-medication">
       <a><%= link_to "Add Medication", new_medication_path %></a>
     </div>
-    
+
   </div>
-  
+
 </div>
