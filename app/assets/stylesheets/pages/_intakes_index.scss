@@ -21,8 +21,16 @@
     color: #9F9F9F;
   }
 
-  a {
-    text-decoration: none;
+  .fa-solid.fa-check {
+    color: #E3E3E3;
+  }
+}
+
+.intake-card.active{
+  background-color: #F2E1BD;
+
+  i.fa-solid.fa-check {
+    color: black;
   }
 }
 
@@ -94,28 +102,4 @@
 
 .Intakes-Index a {
   text-decoration: none;
-}
-
-.fa-solid.fa-check{
-  color: #E3E3E3;
-
-a {
-  font-weight: 500;
-  font-size: 13;
-
-}
-}
-
-.fa-solid.fa-check.active{
-  color: black;
-
-a {
-  font-weight: 500;
-  font-size: 13;
-
-}
-}
-
-.intake-card.active{
-  background-color: #F2E1BD;
 }

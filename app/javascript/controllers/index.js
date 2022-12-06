@@ -4,9 +4,6 @@
 
 import { application } from "./application"
 
-import CompleteController from "./complete_controller"
-application.register("complete", CompleteController)
-
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
