@@ -32,7 +32,8 @@ class MedicationsController < ApplicationController
     @medication.user = current_user
     if @medication.save
       @medication.generate_intakes(params[:medication][:interval], params[:medication][:intake_times])
-      redirect_to medication_path(@medication)
+      redirect_to medication_path(@medication), notice: "Medication sucessfully created!"
+
     else
       render :new
     end
