@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <h2 class="home-title" >Hello!</h2>
+
+  <div class="home-container">
+
+    <div class="image-doctors-heart">
+      <%= image_tag ("doctors-heart.svg") %>
+    </div>
+
+    <div class="medications">
+      <h3><%= link_to "Medications", intakes_path %></h3>
+      <h5>YOUR NEXT INTAKE:</h5>
+      <p><strong><%= @next_intake.medication.name %></strong></p>
+      <p><strong><%= @next_intake.medication.dose%></strong></p>
+      <p><strong><%= @next_intake.expected_intake.strftime("%m/%d/%Y, at %I:%M%p") %></strong></p>
+    </div>
+
+    <div class="appointments">
+      <h3>Appointments</h3>
+      <h5>YOUR NEXT DOCTOR'S APPOINTMENT:</h5>
+      <p><strong>Dr.med. Prager</strong></p>
+      <p><strong>Dentist Checkup</strong></p>
+      <p><strong>15/01/2023, at 15:45PM</strong></p>
+    </div>
+
+    <div class="shadow">
+    </div>
+  </div>
+</div>

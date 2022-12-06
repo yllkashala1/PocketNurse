@@ -2,16 +2,17 @@
   <div class="container-fluid">
 
     <div class="pocket-nurse-text-logo">
-      <%= link_to "Pocket Nurse", intakes_path %>
+      <%= link_to "Pocket Nurse", home_path %>
     </div>
 
     <% if user_signed_in? %>
       <div class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <%= image_tag "user_portrait.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <div class="dropdown-menu dropdown-menu-end custom-navbar-menu" aria-labelledby="navbarDropdown">
           <div class="links-container">
-            <h5>Hi, User</h5>
+            <h5>Hello,</h5>
             <h5>Here is your Menu</h5>
+            <%= link_to "Home", home_path, class: "dropdown-item" %>
             <%= link_to "Your Intakes", intakes_path, class: "dropdown-item" %>
             <%= link_to "All Medications", medications_path, class: "dropdown-item" %>
             <%= link_to "Add Medication", new_medication_path, class: "dropdown-item" %>

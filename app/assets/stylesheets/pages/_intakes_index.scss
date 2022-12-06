@@ -1,16 +1,18 @@
 .intake-card {
   background-color: white;
   color: black;
-  height: 130px;
+  height: 140px;
   width: 342px;
   margin-bottom: 10px;
   border-radius: 27px;
   padding: 20px;
   padding-left: 30px;
+  padding-bottom: 30px;
   font-family: $headers-font;
 
-  h4 {
+  a {
     font-size: 18px;
+    text-decoration: none;
   }
 
   p {
@@ -38,7 +40,7 @@
 .intakes-h1 {
   margin-left: 30px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 
@@ -64,9 +66,9 @@
 
 .link-all-medications-intakes {
   align-content: right;
-  margin-top: 30px;
-  margin-bottom: 25px;
-  padding-left: 210px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding-left: 245px;
 
   a {
     color: black;
@@ -74,14 +76,14 @@
   }
 }
 
-.nav-link.active a {
-  background-color: #F2E1BD;
-  color: white;
-}
+// .Tabs #pills-tab #pills-home-tab {
+//   background-color: #F2E1BD;
+//   color: black;
+// }
 
 .nav-link {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .Tabs {
@@ -89,6 +91,8 @@
   font-size: 15px;
 }
 
+
 .Intakes-Index a {
   text-decoration: none;
 }
+
