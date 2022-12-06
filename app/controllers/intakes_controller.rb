@@ -19,4 +19,15 @@ class IntakesController < ApplicationController
     )
   end
 
+
+  def update
+    @completed_intake = Intake.find(params[:id])
+    @completed_intake.toggle!(:complete)
+    @completed_intake.save
+    respond_to do |format|
+      format.html { redirect_to intakes_path }
+      format.text { render partial: "intakes/intake_card", locals: {intake: @completed_intake}, formats: [:html] }
+    end
+  end
+
 end

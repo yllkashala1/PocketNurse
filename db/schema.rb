@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_133246) do
   enable_extension "plpgsql"
 
   create_table "intakes", force: :cascade do |t|
-    t.boolean "complete"
+    t.boolean "complete", default: false
     t.bigint "medication_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

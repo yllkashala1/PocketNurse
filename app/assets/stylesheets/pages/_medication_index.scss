@@ -1,6 +1,8 @@
 .all-medications {
   margin: 5px;
   padding-bottom: 70px;
+  text-decoration: none;
+
 }
 
 #all-medications-title {
@@ -9,9 +11,13 @@
   margin-bottom: 10px;
   padding: 2px;
 
+  text-decoration: none;
+
+
   a {
     margin-top: 10px;
   }
+
 }
 
 .cards-container {
@@ -38,14 +44,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  text-decoration: none;
+
 
   h2 {
     padding-top:10px;
     font-family: $body-font;
     font-size: 14px;
     letter-spacing: 2;
+
+    text-decoration: none;
+
+
     text-align: left;
     margin-bottom: 10px;
+
   }
 
   p {
@@ -53,6 +66,8 @@
     font-weight: lighter;
     font-size: 13.5px;
     margin: 0px;
+    text-decoration: none;
+
   }
 }
 
@@ -70,8 +85,17 @@
   align-content: right;
 }
 
+
+.intake-card.active{
+  background-color: rgb(226, 214, 184);
+}
+
+.fa-solid.fa-check.active{
+  color: black;
+
 a {
   color: black;
   font-weight: 500;
   font-size: 13;
+
 }
