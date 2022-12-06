@@ -8,3 +8,4 @@ export default class extends Controller {
     this.element.scrollTo((this.dayTarget.clientWidth * 14) - 75, 0);
   }
 }
+
