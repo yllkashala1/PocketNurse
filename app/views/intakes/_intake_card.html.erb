@@ -1,4 +1,6 @@
-<div class="intake-card <%= intake.complete ? "active" : "" %>" data-controller="update-complete" data-action="click->complete#taken">
+<div class="intake-card <%= intake.complete ? "active" : "" %> <%= intake.overdue? ? "red" : "" %>"
+    data-controller="update-complete"
+    data-action="click->complete#taken">
   <%= link_to intake_path(intake), data: { turbo_method: "PATCH", action: "click->update-complete#swapCard" }, class: "tick-off-circle" do %>
     <i class="fa-solid fa-check"></i>
   <% end %>
