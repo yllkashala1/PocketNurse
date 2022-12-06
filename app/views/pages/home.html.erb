@@ -9,7 +9,7 @@
 
     <div class="medications">
       <h3><%= link_to "Medications", intakes_path %></h3>
-      <h5>YOUR NEXT INTAKE:</h5>
+      <h5>YOUR NEXT MED. INTAKE:</h5>
       <p><strong><%= @next_intake.medication.name %></strong></p>
       <p><strong><%= @next_intake.medication.dose%></strong></p>
       <p><strong><%= @next_intake.expected_intake.strftime("%m/%d/%Y, at %I:%M%p") %></strong></p>
