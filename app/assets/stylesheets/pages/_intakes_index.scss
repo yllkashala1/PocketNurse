@@ -1,13 +1,11 @@
 .intake-card {
   background-color: white;
   color: black;
-  height: 140px;
+  height: 150px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 27px;
   padding: 20px;
-  padding-left: 30px;
-  padding-bottom: 30px;
   font-family: $headers-font;
 
   a {
@@ -16,8 +14,9 @@
   }
 
   p {
+    font-family: $body-font;
     margin: 0px;
-    font-size: 12px;
+    font-size: 14px;
     color: #9F9F9F;
   }
 
@@ -47,8 +46,7 @@
 
 .intakes-h1 {
   margin-left: 30px;
-  margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 
@@ -85,7 +83,7 @@
 }
 
 .intake-card.red {
-  background-color: red;
+  border: solid 1px #D94A3D;
 }
 // .Tabs #pills-tab #pills-home-tab {
 //   background-color: #F2E1BD;

@@ -5,15 +5,10 @@
   padding: 30px 25px 80px 25px;
   margin-top: 20px;
 
-  h1 {
-    padding-bottom: 10px;
-    margin-top: 100px;
-    margin-bottom: 20px;
-  }
-
   a {
     color: black;
     font-weight: 500;
+    text-decoration: none;
   }
 }
 
@@ -52,10 +47,14 @@
 
 .image-title {
   display: flex;
+  flex-direction: row;
+  align-items: bottom;
+  align-content: bottom;
   margin: 0px;
-  align-items: baseline;
   justify-content: left;
-  gap: 25px
+  gap: 25px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 .image-title > img {
@@ -64,9 +63,9 @@
 }
 
 #medication_intake_times {
-  height: 30px
+  height: 31px
 }
 
 #medication_interval {
-  height: 30px
+  height: 31px
 }
