@@ -62,11 +62,15 @@
   display: flex;
   justify-content: right;
   padding-right: 25px;
+  text-decoration: none;
+
 
   a {
     color: black;
     font-size: 15px;
     font-family: $headers-font;
     margin-top: 90px;
+    text-decoration: none;
+
   }
 }
