@@ -10,5 +10,8 @@ application.register("hello", HelloController)
 import HorizontalScrollController from "./horizontal_scroll_controller"
 application.register("horizontal-scroll", HorizontalScrollController)
 
+import SweetAlertController from "./sweet_alert_controller"
+application.register("sweet-alert", SweetAlertController)
+
 import UpdateCompleteController from "./update_complete_controller"
 application.register("update-complete", UpdateCompleteController)
