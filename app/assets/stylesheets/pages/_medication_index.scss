@@ -87,7 +87,18 @@
 
 
 .intake-card.active{
-  background-color: rgb(226, 214, 184);
+  background-color: #F2E1BD;
+}
+
+.fa-solid.fa-check{
+  color: #E3E3E3;
+
+a {
+  color: #E3E3E3;
+  font-weight: 500;
+  font-size: 13;
+
+}
 }
 
 .fa-solid.fa-check.active{

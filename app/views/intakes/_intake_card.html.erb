@@ -6,5 +6,5 @@
   <% end %>
   <h4><%= intake.medication.name %></h4>
   <p>Dose: <%= intake.medication.dose %></p>
-  <p>Time: <%= intake.expected_intake.strftime("%H:%M") %></p>
+  <p><%= intake.expected_intake.strftime("at %I:%M%p") %></p>
 </div>
