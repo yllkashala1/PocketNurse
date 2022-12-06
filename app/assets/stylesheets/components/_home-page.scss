@@ -9,23 +9,28 @@
   border-radius: 24px;
   margin: 30px;
   margin-bottom: 15px;
-  margin-top: 80px;
-  padding: 10px 10px;
+  margin-top: 60px;
   width: 324px;
   height: 172px;
   text-decoration: none;
-  padding-left: 25px;
-  padding-top: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   a {
     text-decoration: none;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 }
 
 .home-title {
   font-size: 30px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .appointments {
@@ -34,11 +39,16 @@
   border-radius: 24px;
   margin: 30px;
   margin-top: 15px;
-  padding: 10px 10px;
+  padding: 20px;
   width: 324px;
   height: 172px;
-  padding-left: 25px;
-  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    font-size: 20px;
+  }
 }
 
 .image-doctors-heart img {
@@ -66,16 +76,3 @@
     font-weight: lighter;
   }
 }
-
-// .home-container .shadow {
-//   align-items: center;
-//   width: 298px;
-//   height: 20px;
-//   left: 46px;
-//   top: 766px;
-//   background: #CEDCF2;
-//   opacity: 15%;
-//   filter: blur(2px);
-//   border-radius: 250px;
-//   margin-top: 10px;
-// }

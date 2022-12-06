@@ -1,17 +1,14 @@
 <div class="show-individual-medication">
-  <div class="link-all-medications">
-    <%= link_to "See All Medications", medications_path %>
-  </div>
 
     <div class="show-content">
       <%= link_to "Back", :back %>
 
-      <h1><%= @medication.name %></h1>
+      <h1><%= @medication.name.upcase %></h1>
 
-      <h5>Duration:</h5>
+      <h5>DURATION:</h5>
       <p><%= @medication.start_date %> - <%= @medication.end_date %></p>
 
-      <h5>Dose:</h5>
+      <h5>DOSE:</h5>
       <p><%= @medication.dose %></p>
 
       <div class="comment-box">

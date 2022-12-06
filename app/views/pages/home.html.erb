@@ -9,18 +9,18 @@
 
     <div class="medications">
       <h3><%= link_to "Medications", intakes_path %></h3>
-      <h5>YOUR NEXT INTAKE</h5>
-      <p>Name of the pill</p>
-      <p>Time</p>
-      <p>Dose</p>
+      <h5>YOUR NEXT MED. INTAKE:</h5>
+      <p><strong><%= @next_intake.medication.name %></strong></p>
+      <p><strong><%= @next_intake.medication.dose%></strong></p>
+      <p><strong><%= @next_intake.expected_intake.strftime("%m/%d/%Y, at %I:%M%p") %></strong></p>
     </div>
 
     <div class="appointments">
-      <h3>Doctor's Appointments</h3>
-      <h5>YOUR NEXT APPOINTMENT</h5>
-      <p>Name of the Doctor</p>
-      <p>Type of appointment</p>
-      <p>Date</p>
+      <h3>Appointments</h3>
+      <h5>YOUR NEXT DOCTOR'S APPOINTMENT:</h5>
+      <p><strong>Dr.med. Prager</strong></p>
+      <p><strong>Dentist Checkup</strong></p>
+      <p><strong>15/01/2023, at 15:45PM</strong></p>
     </div>
   </div>
 </div>

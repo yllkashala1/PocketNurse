@@ -8,7 +8,7 @@
 
 Intake.destroy_all && Medication.destroy_all && User.destroy_all
 
-interval = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 intake_times = [
   "1:00am", "2:00am", "3:00am", "4:00am", "5:00am", "6:00am", "7:00am", "8:00am", "9:00am", "10:00am", "11:00am",
   "1:00pm", "2:00pm", "3:00pm", "4:00pm", "5:00pm", "6:00pm", "7:00pm", "8:00pm", "9:00pm", "10:00pm", "11:00pm"
@@ -20,82 +20,118 @@ ms_von_braun = User.create!(
   password_confirmation: "secret"
 )
 
-aspirin = Medication.create!(
-  name: "Aspirin",
-  start_date: Date.new(2022, 11, 15),
-  end_date: Date.new(2022, 11, 18),
-  dose: "1 Tab",
-  user: ms_von_braun
-)
-
+puts "Creating Ibuprofen and intakes..."
 ibuprofen = Medication.create!(
   name: "Ibuprofen",
-  start_date: Date.new(2022, 11, 15),
-  end_date: Date.new(2022, 11, 18),
-  dose: "400mg",
+  start_date: Date.new(2022, 12, 9),
+  end_date: Date.new(2022, 12, 15),
+  dose: "3 Tabs",
+  comment: "Eat something before taking this med.",
   user: ms_von_braun
 )
 
+ibuprofen.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+
+
+puts "Creating Multivitamin and intakes..."
 multivitamin = Medication.create!(
   name: "Multivitamin",
-  start_date: Date.new(2022, 11, 15),
-  end_date: Date.new(2022, 11, 18),
-  dose: "2 Tabs",
+  start_date: Date.new(2022, 12, 9),
+  end_date: Date.new(2022, 12, 15),
+  dose: "3 Tabs",
+  comment: "Trink 2 glasses of water",
   user: ms_von_braun
 )
 
+multivitamin.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+
+
+puts "Creating Magnesium and intakes..."
 magnesium = Medication.create!(
   name: "Magnesium",
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
+  comment: "Don't forget to take this med.",
   user: ms_von_braun
 )
 
+magnesium.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+
+puts "Creating Calcium and intakes..."
 calcium = Medication.create!(
   name: "Calcium",
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
-  user: ms_von_braun)
+  comment: "Eat something before taking this med.",
+  user: ms_von_braun
+)
 
+calcium.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+
+
+puts "Creating Vitamin D and intakes..."
 vitamind = Medication.create!(
   name: "Vitamin D",
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
-  user: ms_von_braun)
+  comment: "Eat something before taking this med.",
+  user: ms_von_braun
+)
 
+vitamind.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+
+puts "Creating Vitamin B and intakes..."
 vitaminb = Medication.create!(
   name: "Vitamin B",
   start_date: Date.new(2022, 11, 15),
   end_date: Date.new(2022, 11, 18),
   dose: "1 Sachet",
-  user: ms_von_braun)
+  comment: "Eat something before taking this med.",
+  user: ms_von_braun
+)
 
+vitaminb.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+
+
+puts "Creating Antibiotika and intakes..."
 antibiotika = Medication.create!(
   name: "Antibiotika",
   start_date: Date.new(2022, 12, 15),
   end_date: Date.new(2022, 12, 18),
-  dose: "2 Tab",
+  dose: "2 Tabs",
+  comment: "Eat something before taking Antibiotika!",
   user: ms_von_braun
 )
 
+antibiotika.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+
+puts "Creating Vitamin C and intakes..."
 vitaminc = Medication.create!(
   name: "Vitamin C",
   start_date: Date.new(2022, 12, 10),
   end_date: Date.new(2023, 01, 10),
-  dose: "1 Tab",
+
+  dose: "1",
+  comment: "Don't forget to trink water!",
   user: ms_von_braun
 )
 
-aspirin.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-ibuprofen.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-multivitamin.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-magnesium.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-calcium.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-vitamind.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-vitaminb.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-antibiotika.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-vitaminc.generate_intakes(interval.sample(rand(1..3)), intake_times.sample(rand(1..3)))
+vitaminc.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
 
+puts "Creating Aspirin and intakes..."
+aspirin = Medication.create!(
+  name: "Aspirin",
+  start_date: Date.new(2022, 12, 9),
+  end_date: Date.new(2022, 12, 11),
+  dose: " 1 Tab",
+  comment: "This is very important!",
+  user: ms_von_braun
+)
+
+aspirin.generate_intakes(
+  ["Friday", "Saturday", "Sunday"],
+  ["7:00am", "1:00pm", "7:00pm"],
+)

@@ -7,7 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-
 import HorizontalScrollController from "./horizontal_scroll_controller"
 application.register("horizontal-scroll", HorizontalScrollController)
 
+import UpdateCompleteController from "./update_complete_controller"
+application.register("update-complete", UpdateCompleteController)
