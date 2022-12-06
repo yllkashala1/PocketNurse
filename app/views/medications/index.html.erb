@@ -12,11 +12,11 @@
         <p><strong>Dose:</strong> <%= medication.dose %></p>
         <p><strong>From</strong>  <%= medication.start_date %> <strong>To</strong> <%= medication.end_date %></p>
 
-        <div class="delete-medication">
-          <%= link_to medication_path(medication),
-            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "trash-can" do %>
-          <%= image_tag "trash.png" %>
-          <% end %>
+        <div class="d-flex justify-content-end" data-controller="sweet-alert" data-sweet-alert-medication-name-value="<%= medication.name %>">
+          <%= link_to "", medication_path(medication), data: { turbo_method: :delete, sweet_alert_target: "link" }, class: "hidden" %>
+          <button data-action="click->sweet-alert#popUp" class="trash-can">
+            <%= image_tag "trash.png" %>
+          </button>
         </div>
 
       </div>
