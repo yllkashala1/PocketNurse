@@ -2,7 +2,7 @@
   background-color: white;
   color: black;
   height: 140px;
-  width: 342px;
+  width: 100%;
   margin-bottom: 10px;
   border-radius: 27px;
   padding: 20px;
@@ -21,8 +21,16 @@
     color: #9F9F9F;
   }
 
-  a {
-    text-decoration: none;
+  .fa-solid.fa-check {
+    color: #E3E3E3;
+  }
+}
+
+.intake-card.active{
+  background-color: #F2E1BD;
+
+  i.fa-solid.fa-check {
+    color: black;
   }
 }
 
@@ -82,8 +90,8 @@
 // }
 
 .nav-link {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .Tabs {
@@ -95,4 +103,3 @@
 .Intakes-Index a {
   text-decoration: none;
 }
-
