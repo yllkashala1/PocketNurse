@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 Intake.destroy_all && Medication.destroy_all && User.destroy_all
+
 weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 intake_times = [
   "1:00am", "2:00am", "3:00am", "4:00am", "5:00am", "6:00am", "7:00am", "8:00am", "9:00am", "10:00am", "11:00am",
@@ -134,4 +135,3 @@ aspirin.generate_intakes(
   ["Friday", "Saturday", "Sunday"],
   ["7:00am", "1:00pm", "7:00pm"],
 )
-
