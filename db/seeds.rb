@@ -23,8 +23,8 @@ ms_von_braun = User.create!(
 puts "Creating Ibuprofen and intakes..."
 ibuprofen = Medication.create!(
   name: "Ibuprofen",
-  start_date: Date.new(2022, 12, 9),
-  end_date: Date.new(2022, 12, 15),
+  start_date: Date.new(2022, 11, 20),
+  end_date: Date.new(2022, 12, 5),
   dose: "3 Tabs",
   comment: "Eat something before taking this med.",
   user: ms_von_braun
@@ -32,25 +32,11 @@ ibuprofen = Medication.create!(
 
 ibuprofen.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
 
-
-puts "Creating Multivitamin and intakes..."
-multivitamin = Medication.create!(
-  name: "Multivitamin",
-  start_date: Date.new(2022, 12, 9),
-  end_date: Date.new(2022, 12, 15),
-  dose: "3 Tabs",
-  comment: "Trink 2 glasses of water",
-  user: ms_von_braun
-)
-
-multivitamin.generate_intakes(weekdays.sample(rand(1..3)), intake_times.sample(rand(1..3)))
-
-
 puts "Creating Magnesium and intakes..."
 magnesium = Medication.create!(
   name: "Magnesium",
-  start_date: Date.new(2022, 11, 15),
-  end_date: Date.new(2022, 11, 18),
+  start_date: Date.new(2022, 11, 30),
+  end_date: Date.new(2022, 12, 5),
   dose: "1 Sachet",
   comment: "Don't forget to take this med.",
   user: ms_von_braun
@@ -112,7 +98,7 @@ puts "Creating Vitamin C and intakes..."
 vitaminc = Medication.create!(
   name: "Vitamin C",
   start_date: Date.new(2022, 12, 10),
-  end_date: Date.new(2023, 01, 10),
+  end_date: Date.new(2023, 1, 10),
 
   dose: "1",
   comment: "Don't forget to trink water!",
@@ -133,5 +119,20 @@ aspirin = Medication.create!(
 
 aspirin.generate_intakes(
   ["Friday", "Saturday", "Sunday"],
-  ["7:00am", "1:00pm", "7:00pm"],
+  ["7:00am", "1:00pm", "7:00pm"]
+)
+
+puts "Creating Multivitamin and intakes..."
+multivitamin = Medication.create!(
+  name: "Multivitamin",
+  start_date: Date.new(2022, 12, 9),
+  end_date: Date.new(2022, 12, 15),
+  dose: "3 Tabs",
+  comment: "Trink 2 glasses of water",
+  user: ms_von_braun
+)
+
+multivitamin.generate_intakes(
+  ["Friday", "Saturday", "Sunday"],
+  ["9:00am", "2:00pm", "8:00pm"]
 )
