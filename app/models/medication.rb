@@ -25,7 +25,6 @@ class Medication < ApplicationRecord
             hour = intake_time.split(":")[0].to_i + 12
           end
           intake_time_of_day = DateTime.new(date.year, date.month, date.day, hour)
-          raise
           Intake.create(expected_intake: intake_time_of_day, medication: self)
         end
       end
