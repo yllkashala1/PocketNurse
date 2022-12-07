@@ -14,7 +14,22 @@ class Medication < ApplicationRecord
     end_date = self.end_date # end_date user input inside klammern # Mon, 05 Dec 2022
     date = start_date # Fri, 02 Dec 2022
     while date <= end_date
-      if interval.include?(Date::DAYNAMES[date.wday])
+      if interval
+        if interval.include?(Date::DAYNAMES[date.wday])
+          intake_times.each do |intake_time|
+            # intake_time => "7:00am" "7:00pm"
+            if intake_time[-2..] == "12:00pm"
+              hour = 12
+            elsif intake_time[-2..] == "am"
+              hour = intake_time.split(":")[0].to_i
+            else
+              hour = intake_time.split(":")[0].to_i + 12
+            end
+            intake_time_of_day = DateTime.new(date.year, date.month, date.day, hour)
+            Intake.create(expected_intake: intake_time_of_day, medication: self)
+          end
+        end
+      else
         intake_times.each do |intake_time|
           # intake_time => "7:00am" "7:00pm"
           if intake_time[-2..] == "12:00pm"
@@ -25,7 +40,6 @@ class Medication < ApplicationRecord
             hour = intake_time.split(":")[0].to_i + 12
           end
           intake_time_of_day = DateTime.new(date.year, date.month, date.day, hour)
-          raise
           Intake.create(expected_intake: intake_time_of_day, medication: self)
         end
       end
