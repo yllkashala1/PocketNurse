@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 const flash = "<div class=\"alert alert-info alert-dismissible fade show m-1\" role=\"alert\">Medication successfully taken!<button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button></div>"
-const alert_timeout_in_ms = 5000
+const alert_timeout_in_ms = 2000
 
 // Connects to data-controller="update-complete"
 export default class extends Controller {
