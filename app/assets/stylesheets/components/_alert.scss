@@ -1,6 +1,20 @@
 .alert {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
   z-index: 1000;
 }
+
+.swal-icon--warning {
+  color: #F2E1BD;
+}
+.swal-title {
+  font-family: $headers-font;
+}
+.swal-text {
+  font-family: $body-font;
+}
+.swal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+
