@@ -5,11 +5,10 @@
     <i class="fa-solid fa-check"></i>
   <% end %>
 
-  <% if intake.overdue? %>
-    <h4><%= intake.medication.name %> (overdue)</h4>
-  <% else %>
-    <h4><%= intake.medication.name %></h4>
-  <% end %>
+  <h4>
+    <%= link_to "#{intake.medication.name}", medication_path(intake.medication) %>
+    <%= "(overdue)" if intake.overdue? %>
+  </h4>
 
   <p>Dose: <%= intake.medication.dose %></p>
   <p><%= intake.expected_intake.strftime("at %I:%M%p") %></p>

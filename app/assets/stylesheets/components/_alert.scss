@@ -1,6 +1,7 @@
 .alert {
-  position: fixed;
-  z-index: 1000;
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
 }
 
 .swal-icon--warning {
@@ -24,4 +25,3 @@
 .swal-button .swal-button--confirm .swal-button--danger {
   background-color: #F2E1BD;
 }
-
