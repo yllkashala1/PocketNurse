@@ -2,8 +2,10 @@
 
     <div class="show-content">
       <%= link_to "Back", :back %>
-      
-      <%= image_tag "undraw_scientist_re_6v28.svg", class:"show-iage-doc"%>
+
+      <div class="show-iage-doc">
+        <%= image_tag "undraw_scientist_re_6v28.svg" %>
+      </div>
 
       <h1><%= @medication.name.upcase %></h1>
 
