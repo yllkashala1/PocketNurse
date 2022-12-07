@@ -88,7 +88,7 @@ antibiotika = Medication.create!(
   start_date: Date.new(2022, 12, 15),
   end_date: Date.new(2022, 12, 18),
   dose: "2 Tabs",
-  comment: "Eat something before taking Antibiotika!",
+  comment: "Make sure to eat something before taking this! May cause nausea otherwise",
   user: ms_von_braun
 )
 
