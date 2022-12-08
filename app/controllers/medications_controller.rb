@@ -1,6 +1,6 @@
 class MedicationsController < ApplicationController
   def index
-    @medications = Medication.all
+    @medications = current_user.medications
   end
 
   def show
