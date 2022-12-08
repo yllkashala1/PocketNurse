@@ -1,5 +1,5 @@
 <% content_for :meta_title, "#{@medication.name} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @medication.description %>
+<% content_for :meta_description, @medication.comment %>
 <% content_for :meta_image, cl_image_path(@medication.photo.path) %>
 
 <div class="show-individual-medication">
